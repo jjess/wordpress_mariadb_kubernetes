@@ -9,7 +9,7 @@ pipeline{
 		stage('Deploy mariadb to kubernetes')
 		{
 			steps{
-				sshagent(['k8s-jenkins'])
+				sshagent(['kubernetes-master-node']) // jenkins credentials ID for kubernetes-master-node
 				{
 					sh 'scp -r -o StrictHostKeyChecking=no mariadb-deployment-pvc.yaml jjess@192.168.56.102:/jenkins_deployments/'
 					

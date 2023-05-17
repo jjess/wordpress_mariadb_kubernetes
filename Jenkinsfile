@@ -11,7 +11,7 @@ pipeline{
 						namespace: 'default'
 						]) {
 							sh 'kubectl get pods'
-							#kubernetesDeploy(configs: "mariadb-deployment-pvc.yaml")
+							// kubernetesDeploy(configs: "mariadb-deployment-pvc.yaml")
 				}
 			}
 		}

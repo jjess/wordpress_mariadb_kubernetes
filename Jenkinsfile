@@ -11,6 +11,7 @@ pipeline{
 						namespace: 'default'
 						]) {
 							sh 'kubectl apply -f mariadb-deployment-pvc.yaml'
+							sh 'kubectl apply -f wordpress-deployment-pvc.yaml'
 							sh 'kubectl get deployments'
 							sh 'kubectl get pods'
 							// kubernetesDeploy(configs: "mariadb-deployment-pvc.yaml")

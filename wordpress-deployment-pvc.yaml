@@ -29,7 +29,7 @@ spec: # specification for deployment resource
     spec: # specification for Pod
       containers:
       - name: wordpress
-        image: wordpress:latest 
+        image: jjjesss/wordpress_develop:latest 
         ports:
         - containerPort: 80
         env:
